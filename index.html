@@ -35,7 +35,7 @@
 
     <!-- Mobile Navbar -->
     <nav
-      class="md:hidden fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 bg-zinc-900/50 backdrop-blur-md shadow-xl rounded-full px-6 py-4">
+      class="md:hidden fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 bg-zinc-900/50 backdrop-blur-md shadow-xl rounded-none px-6 py-4">
       <div class="flex justify-between items-center">
         <!-- Brand -->
         <div class="text-lg font-semibold text-white">
@@ -49,32 +49,28 @@
       <!-- Dropdown menu -->
       <ul id="menu" class="hidden flex-col mt-3 space-y-3">
         <li>
-          <a href="#about"
-            class="block text-white font-semibold bg-zinc-800 hover:bg-indigo-500 rounded-full px-6 py-2 text-center transition-colors">
+          <a href="#about" class="block font-semibold text-indigo-500 rounded-md px-6 py-2 transition-colors">
             About
           </a>
         </li>
         <li>
-          <a href="#experience"
-            class="block text-white font-semibold bg-zinc-800 hover:bg-indigo-500 rounded-full px-6 py-2 text-center transition-colors">
+          <a href="#experience" class="block font-semibold text-indigo-500 rounded-md px-6 py-2 transition-colors">
             Experience
           </a>
         </li>
         <li>
-          <a href="#projects"
-            class="block text-white font-semibold bg-zinc-800 hover:bg-indigo-500 rounded-full px-6 py-2 text-center transition-colors">
+          <a href="#projects" class="block font-semibold text-indigo-500 rounded-md px-6 py-2 transition-colors">
             Projects
           </a>
         </li>
         <li>
-          <a href="#contact"
-            class="block text-white font-semibold bg-zinc-800 hover:bg-indigo-500 rounded-full px-6 py-2 text-center transition-colors">
+          <a href="#contact" class="block font-semibold text-indigo-500 rounded-md px-6 py-2 transition-colors">
             Contact
           </a>
         </li>
         <li>
           <button
-            class="w-full px-6 py-2 bg-indigo-500 text-white font-semibold rounded-full hover:bg-white hover:text-indigo-600 transition-colors">
+            class="w-full px-6 py-2 bg-indigo-500 text-white font-semibold rounded-md hover:bg-white hover:text-indigo-600 transition-colors">
             Hire Me
           </button>
         </li>
@@ -91,17 +87,24 @@
 
   <main>
 
-    <section id="about" class="bg-zinc-900 text-white py-20 px-4 md:px-20">
+    <section id="about" class="bg-zinc-900 text-white py-20 px-6  md:px-20">
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         <!-- Text Content -->
-        <div class="space-y-6 pt-16">
-          <h2 class="text-6xl font-bold">Sandun <br>Nelumdeniya</h2>
-          <p class=" text-zinc-300 leading-relaxed">
+        <div class="space-y-6 pt-16 order-1 md:order-1">
+          <h2 class="md:text-6xl text-5xl font-bold">Sandun <br>Nelumdeniya</h2>
+
+          <!-- Image for small screens -->
+          <div class="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl mx-auto mt-6 md:hidden">
+            <img src="./img/IMG_5384.JPG" alt="Sandun Nelumdeniya" class="w-full h-full object-cover">
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
             Hello! I’m Sandun Nelumdeniya — a <span class="text-indigo-500 font-semibold"> UI/UX designer</span> with a
             psychology edge.
             I craft digital experiences that are intuitive, human-centered, and visually engaging.
           </p>
+
           <!-- Quick Stats -->
           <div class="flex flex-wrap gap-6 mt-6">
             <div class="bg-zinc-800 p-4 rounded-lg shadow hover:shadow-xl transition">
@@ -117,6 +120,7 @@
               <p class="text-sm text-zinc-400">LinkedIn Earnings</p>
             </div>
           </div>
+
           <p class="text-xs text-zinc-300 leading-relaxed">
             My work blends <span class="text-indigo-400 font-medium">creative design thinking</span> with <span
               class="text-indigo-400 font-medium">psychology insights</span>, delivering interfaces that are both
@@ -124,8 +128,6 @@
             I study human behavior to design with empathy, understanding how users interact, decide, and feel while
             using digital products.
           </p>
-
-
 
           <!-- Skills / Tags -->
           <div class="mt-6 flex flex-wrap gap-3">
@@ -139,8 +141,8 @@
           </div>
         </div>
 
-        <!-- Illustration / Image -->
-        <div class="flex justify-center md:justify-end mt-auto">
+        <!-- Illustration / Image for medium+ screens -->
+        <div class="flex justify-center md:justify-end mt-6 md:mt-0 order-2 md:order-2 hidden md:flex">
           <div class="w-80 md:w-96 h-96 md:h-[28rem] rounded-2xl overflow-hidden shadow-2xl">
             <img src="./img/IMG_5384.JPG" alt="Sandun Nelumdeniya" class="w-full h-full object-cover">
           </div>
@@ -158,41 +160,41 @@
         </h2>
 
         <!-- Skills Grid -->
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-3">
           <div
-            class="bg-zinc-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+            class="bg-zinc-50 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
             <h3 class="text-indigo-400 font-semibold mb-2">User Research & UX Analysis</h3>
-            <p class="text-zinc-500 text-sm leading-relaxed">Understand users deeply, identify pain points, and uncover
+            <p class="text-zinc-500 text-xs leading-relaxed">Understand users deeply, identify pain points, and uncover
               opportunities.</p>
           </div>
           <div
-            class="bg-zinc-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+            class="bg-zinc-50 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
             <h3 class="text-indigo-400 font-semibold mb-2">Wireframing, User Flows & Prototyping</h3>
-            <p class="text-zinc-500 text-sm leading-relaxed">Rapidly iterate designs to visualize interactions and
+            <p class="text-zinc-500 text-xs leading-relaxed">Rapidly iterate designs to visualize interactions and
               flows.</p>
           </div>
           <div
-            class="bg-zinc-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+            class="bg-zinc-50 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
             <h3 class="text-indigo-400 font-semibold mb-2">High-Fidelity UI Design</h3>
-            <p class="text-zinc-500 text-sm leading-relaxed">Craft polished, pixel-perfect interfaces aligned with brand
+            <p class="text-zinc-500 text-xs leading-relaxed">Craft polished, pixel-perfect interfaces aligned with brand
               identity.</p>
           </div>
           <div
-            class="bg-zinc-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+            class="bg-zinc-50 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
             <h3 class="text-indigo-400 font-semibold mb-2">Usability Testing & Iteration</h3>
-            <p class="text-zinc-500 text-sm leading-relaxed">Test with real users and refine designs based on feedback.
+            <p class="text-zinc-500 text-xs leading-relaxed">Test with real users and refine designs based on feedback.
             </p>
           </div>
           <div
-            class="bg-zinc-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+            class="bg-zinc-50 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
             <h3 class="text-indigo-400 font-semibold mb-2">Design Systems & Components</h3>
-            <p class="text-zinc-500 text-sm leading-relaxed">Maintain consistency and speed with reusable UI components.
+            <p class="text-zinc-500 text-xs leading-relaxed">Maintain consistency and speed with reusable UI components.
             </p>
           </div>
           <div
-            class="bg-zinc-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+            class="bg-zinc-50 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all">
             <h3 class="text-indigo-400 font-semibold mb-2">Psychology-Driven Design Decisions</h3>
-            <p class="text-zinc-500 text-sm leading-relaxed">Leverage cognitive principles to improve user experience.
+            <p class="text-zinc-500 text-xs leading-relaxed">Leverage cognitive principles to improve user experience.
             </p>
           </div>
         </div>
@@ -354,14 +356,14 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="bg-zinc-900 text-white py-20 px-6 md:px-40">
+    <section id="experience" class="bg-zinc-900 text-white py-20 pb-24 px-6 md:px-40 ">
       <h2 class="text-4xl md:text-3xl font-bold text-white text-center md:text-left mb-6">
         Experience
       </h2>
       <div class="space-y-8 md:space-y-12">
-        <article class="bg-zinc-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+        <article class="bg-zinc-800 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
           <h3 class="text-indigo-400 font-semibold text-xl mb-1">UI/UX Designer — Freelance</h3>
-          <p class="text-zinc-400 mb-3">2021 – Present</p>
+          <p class="text-zinc-400 mb-3">2021 – present</p>
           <ul class="list-disc list-inside text-zinc-300">
             <li>Designed user-focused interfaces for mobile apps and web platforms</li>
             <li>Conducted user research and UX analysis</li>
@@ -371,7 +373,7 @@
           </ul>
         </article>
 
-        <article class="bg-zinc-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+        <article class="bg-zinc-800 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
           <h3 class="text-indigo-400 font-semibold text-xl mb-1">Senior Digital Marketing Executive</h3>
           <p class="text-zinc-400 mb-3">2022 – 2024</p>
           <ul class="list-disc list-inside text-zinc-300">
@@ -382,16 +384,17 @@
           </ul>
         </article>
 
-        <article class="bg-zinc-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+        <article class="bg-zinc-800 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
           <h3 class="text-indigo-400 font-semibold text-xl mb-1">LinkedIn Content Creator</h3>
           <p class="text-zinc-400 mb-3">2024</p>
-          <p class="text-zinc-300">Created educational content on design, productivity, psychology, and personal growth,
+          <p class="text-zinc-300">Created educational content on design,
+            productivity, psychology, and personal growth,
             generating earnings of 10K+ and building a strong personal brand.</p>
         </article>
 
-        <article class="bg-zinc-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+        <article class="bg-zinc-800 md:p-6 p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
           <h3 class="text-indigo-400 font-semibold text-xl mb-1">Psychology Student</h3>
-          <p class="text-zinc-400 mb-3">2025 – Present</p>
+          <p class="text-zinc-400 mb-3">2025 – present</p>
           <ul class="list-disc list-inside text-zinc-300">
             <li>Decision-making patterns</li>
             <li>User motivation and behavior</li>
@@ -404,8 +407,8 @@
     </section>
 
     <!-- CONTACT / FOOTER -->
-    <section id="contact" class="bg-zinc-950 py-16 px-6 md:px-30">
-      <div class="w-full rounded-2xl p-8 md:p-10 shadow-xl text-center">
+    <section id="contact" class="bg-zinc-950 pt-16 px-6 md:px-30">
+      <div class="w-full rounded-2xl px-8 md:p-10 shadow-xl text-center">
 
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">
           Contact
